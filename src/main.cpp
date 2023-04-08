@@ -205,7 +205,7 @@ int main() {
     moonModel.SetShaderTextureNamePrefix("material.");
 
     PointLight& pointLight = programState->pointLight;
-    pointLight.position = glm::vec3(7.0f, -9.5, 0.0);
+    pointLight.position = glm::vec3(6.4f, -9.5, 0.0);
     pointLight.ambient = glm::vec3(0.5, 0.5, 0.5);
     pointLight.diffuse = glm::vec3(0.6, 0.6, 0.6);
     pointLight.specular = glm::vec3(1.0, 1.0, 1.0);
@@ -274,7 +274,7 @@ int main() {
     bloomShader.use();
     bloomShader.setInt("scene", 0);
     bloomShader.setInt("bloomBlur", 1);
-
+    bloomShader.setFloat("bloomThreshold", 0.33f);
 
     // skybox
     float skyboxVertices[] = {
